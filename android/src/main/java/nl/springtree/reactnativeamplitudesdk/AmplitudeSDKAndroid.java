@@ -37,8 +37,8 @@ public class AmplitudeSDKAndroid extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void initialize(String apiKey) {
-		Amplitude.getInstance().trackSessionEvents(bool);
+  public void initialize(String apiKey, Boolean trackSessionEvents) {
+		Amplitude.getInstance().trackSessionEvents(trackSessionEvents);
     Amplitude.getInstance().initialize(getCurrentActivity(), apiKey).enableForegroundTracking(this.mApplication);
   }
 
